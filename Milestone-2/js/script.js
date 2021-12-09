@@ -1,4 +1,4 @@
-
+// Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 
 const app = new Vue(
     {
@@ -24,7 +24,9 @@ const app = new Vue(
             ],
         },
         methods:{
-
+            removeLi : function (index){
+                this.todoArray.splice(index, 1);
+            }
         }
     }
 )
