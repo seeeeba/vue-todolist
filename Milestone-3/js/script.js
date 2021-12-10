@@ -4,6 +4,7 @@ const app = new Vue(
     {
         el :'#root',
         data: {
+            newTodo: '',
             todoArray: [
                 {
                     testo: 'Fare la spesa',
@@ -26,6 +27,16 @@ const app = new Vue(
         methods:{
             removeLi : function (index){
                 this.todoArray.splice(index, 1);
+            },
+            addTodo : function (){
+                if(this.newTodo !== ''){
+                    this.todoArray.push(
+                        {
+                            text: this.newTodo,
+                            done: false
+                        }
+                    )
+                };
             }
         }
     }
