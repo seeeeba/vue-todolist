@@ -32,7 +32,7 @@ const app = new Vue(
                 if(this.newTodo !== ''){
                     this.todoArray.push(
                         {
-                            text: this.newTodo,
+                            testo: this.newTodo,
                             done: false
                         }
                     )

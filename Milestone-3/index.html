@@ -21,8 +21,8 @@
         <div class="filters">
             <!-- filtro singolo -->
             <div class="single-filter">
-                <input @keyup.enter="addNewToDo" v-model="newToDoText" type="text" placeholder="Nuovo todo">
-                <button>Aggiungi</button>
+                <input @keyup.enter="addTodo" v-model="newTodo" type="text" placeholder="Nuovo todo">
+                <button @click="addTodo">Aggiungi</button>
             </div>
         </div>
 
